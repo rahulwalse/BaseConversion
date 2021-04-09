@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="BaseConversion.cpp" />
     <ClCompile Include="BaseChange.cpp" />
+    <ClCompile Include="BinaryToDecimal.cpp" />
     <ClCompile Include="BinaryToOctal.cpp" />
     <ClCompile Include="Exponent.cpp" />
   </ItemGroup>

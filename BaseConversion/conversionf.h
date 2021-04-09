@@ -8,6 +8,7 @@
 
 int BaseChange(long long int number, int base);
 void BinaryToOctal(long long int binaryNumber);
+int BinaryToDecimal(long long int binaryNumber);
 
 int Exponent(int base, int number);
 

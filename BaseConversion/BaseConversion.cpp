@@ -1,6 +1,6 @@
 /* BaseConversion.cpp : This file contains the 'main' function. Program execution begins and ends there.*/
 /*
-    This program is an implementation in C++ of algorithm for converting decimal integer number to itscorresponding
+	This program is an implementation in C++ of algorithm for converting decimal integer number to itscorresponding
 	octal representation including supplementary problems and algorithms for base conversions used for converting
 	binary to octal, binary to decimal etc., from the book "How to Solve it by Computer" by R.G. Dromey.
 */
@@ -8,20 +8,20 @@
 #include <iostream>
 #include "conversionf.h"
 using namespace std;
-const int FIRSTOPTION = 1, LASTOPTION = 2;
+const int FIRSTOPTION = 1, LASTOPTION = 3;
 
 int main()
 {
 	int base, choice;	long long int number;	char conti;
 	/*Display the title of the program.*/
-	cout << "\nProgram to convert and display numbers with diffeerent base to represent different number systems." << endl;
+	cout << "\nProgram to convert and display numbers with diffeerent base and to represent in different number systems." << endl;
 	for (int column = 1; column < 121; column++)
 		cout << "=";	/*Printing a line of '='.*/
 
 	do
 	{
 		cout << "\n1. Convert decimal integer number to corresponding binary, ternary, octal representations\n2. Binary to octal conversion";
-		cout << "\nEnter your choice : " << endl;
+		cout << "\n3. Binary to decimal conversion\nEnter your choice: " << endl;
 		cin >> choice;
 		/*Check if the choice is valid, if invalid then exit the program.*/
 		if (choice < FIRSTOPTION || choice > LASTOPTION)
@@ -40,9 +40,14 @@ int main()
 						BaseChange(number, base);
 						break;
 
-				case 2:	cout << "\nEnter the binary number to be converted to octal number." << endl;
+				case 2:	cout << "\nEnter the binary number to be converted to its equivalent octal number." << endl;
 						cin >> number;
 						BinaryToOctal(number);
+						break;
+
+				case 3:	cout << "\nEnter the binary number to be converted to its equivalent deciaml number." << endl;
+						cin >> number;
+						BinaryToDecimal(number);
 						break;
 			}
 		}

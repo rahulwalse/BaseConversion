@@ -30,6 +30,9 @@
     <ClCompile Include="BinaryToDecimal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DecimalToBCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="conversionf.h">

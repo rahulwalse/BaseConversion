@@ -143,6 +143,7 @@
     <ClCompile Include="BaseChange.cpp" />
     <ClCompile Include="BinaryToDecimal.cpp" />
     <ClCompile Include="BinaryToOctal.cpp" />
+    <ClCompile Include="DecimalToBCD.cpp" />
     <ClCompile Include="Exponent.cpp" />
   </ItemGroup>
   <ItemGroup>

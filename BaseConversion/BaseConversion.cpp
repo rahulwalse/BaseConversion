@@ -8,7 +8,7 @@
 #include <iostream>
 #include "conversionf.h"
 using namespace std;
-const int FIRSTOPTION = 1, LASTOPTION = 3;
+const int FIRSTOPTION = 1, LASTOPTION = 4;
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 	do
 	{
 		cout << "\n1. Convert decimal integer number to corresponding binary, ternary, octal representations\n2. Binary to octal conversion";
-		cout << "\n3. Binary to decimal conversion\nEnter your choice: " << endl;
+		cout << "\n3. Binary to decimal conversion\n4. Decimal to Binary Coded Decimal (BCD) number\nEnter your choice: " << endl;
 		cin >> choice;
 		/*Check if the choice is valid, if invalid then exit the program.*/
 		if (choice < FIRSTOPTION || choice > LASTOPTION)
@@ -45,9 +45,14 @@ int main()
 						BinaryToOctal(number);
 						break;
 
-				case 3:	cout << "\nEnter the binary number to be converted to its equivalent deciaml number." << endl;
+				case 3:	cout << "\nEnter the binary number to be converted to its equivalent decimal number." << endl;
 						cin >> number;
 						BinaryToDecimal(number);
+						break;
+
+				case 4:	cout << "\nEnter the decimal number to be converted to its equivalent Binary Coded Decimal (BCD) number." << endl;
+						cin >> number;
+						DecimalToBCD(number);
 						break;
 			}
 		}

@@ -10,6 +10,7 @@ int BaseChange(long long int number, int base);
 void BinaryToOctal(long long int binaryNumber);
 int BinaryToDecimal(long long int binaryNumber);
 int DecimalToBCD(long long int number);
+void DecimalFractionToBinary(double DecimalFraction);
 
 int Exponent(int base, int number);
 

@@ -8,7 +8,7 @@
 #include <iostream>
 #include "conversionf.h"
 using namespace std;
-const int FIRSTOPTION = 1, LASTOPTION = 4;
+const int FIRSTOPTION = 1, LASTOPTION = 5;
 
 int main()
 {
@@ -21,7 +21,8 @@ int main()
 	do
 	{
 		cout << "\n1. Convert decimal integer number to corresponding binary, ternary, octal representations\n2. Binary to octal conversion";
-		cout << "\n3. Binary to decimal conversion\n4. Decimal to Binary Coded Decimal (BCD) number\nEnter your choice: " << endl;
+		cout << "\n3. Binary to decimal conversion\n4. Decimal to Binary Coded Decimal (BCD) number\n5. Fraction of decimal number to its ";
+		cout << "equivalent fractional binary number\nEnter your choice : " << endl;
 		cin >> choice;
 		/*Check if the choice is valid, if invalid then exit the program.*/
 		if (choice < FIRSTOPTION || choice > LASTOPTION)
@@ -53,6 +54,12 @@ int main()
 				case 4:	cout << "\nEnter the decimal number to be converted to its equivalent Binary Coded Decimal (BCD) number." << endl;
 						cin >> number;
 						DecimalToBCD(number);
+						break;
+
+				case 5:	cout << "\nEnter the decimal number with the fractional part." << endl;
+						double decimal;
+						cin >> decimal;
+						DecimalFractionToBinary(decimal);
 						break;
 			}
 		}

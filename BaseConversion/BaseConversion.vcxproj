@@ -145,6 +145,7 @@
     <ClCompile Include="BinaryToOctal.cpp" />
     <ClCompile Include="DecimalFractionToBinary.cpp" />
     <ClCompile Include="DecimalToBCD.cpp" />
+    <ClCompile Include="DecimalToBinary.cpp" />
     <ClCompile Include="Exponent.cpp" />
   </ItemGroup>
   <ItemGroup>

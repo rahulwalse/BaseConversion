@@ -8,11 +8,11 @@
 #include <iostream>
 #include "conversionf.h"
 using namespace std;
-const int FIRSTOPTION = 1, LASTOPTION = 5;
+const int FIRSTOPTION = 1, LASTOPTION = 6;
 
 int main()
 {
-	int base, choice;	long long int number;	char conti;
+	int base, choice;	long long int number;	char conti;	double decimal;
 	/*Display the title of the program.*/
 	cout << "\nProgram to convert and display numbers with diffeerent base and to represent in different number systems." << endl;
 	for (int column = 1; column < 121; column++)
@@ -22,7 +22,7 @@ int main()
 	{
 		cout << "\n1. Convert decimal integer number to corresponding binary, ternary, octal representations\n2. Binary to octal conversion";
 		cout << "\n3. Binary to decimal conversion\n4. Decimal to Binary Coded Decimal (BCD) number\n5. Fraction of decimal number to its ";
-		cout << "equivalent fractional binary number\nEnter your choice : " << endl;
+		cout << "equivalent fractional binary number\n6. Convert decimal number to binary number\nEnter your choice : " << endl;
 		cin >> choice;
 		/*Check if the choice is valid, if invalid then exit the program.*/
 		if (choice < FIRSTOPTION || choice > LASTOPTION)
@@ -57,9 +57,13 @@ int main()
 						break;
 
 				case 5:	cout << "\nEnter the decimal number with the fractional part." << endl;
-						double decimal;
 						cin >> decimal;
 						DecimalFractionToBinary(decimal);
+						break;
+
+				case 6:	cout << "\nEnter the decimal number." << endl;
+						cin >> decimal;
+						DecimalToBinary(decimal);
 						break;
 			}
 		}
